@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/idp-symposium/static/css/main.7dcd2523.css",
+    "main.js": "/idp-symposium/static/js/main.de79ef4d.js",
+    "static/js/453.2a23a389.chunk.js": "/idp-symposium/static/js/453.2a23a389.chunk.js",
+    "static/media/logo.svg": "/idp-symposium/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/idp-symposium/index.html",
+    "main.7dcd2523.css.map": "/idp-symposium/static/css/main.7dcd2523.css.map",
+    "main.de79ef4d.js.map": "/idp-symposium/static/js/main.de79ef4d.js.map",
+    "453.2a23a389.chunk.js.map": "/idp-symposium/static/js/453.2a23a389.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dcd2523.css",
+    "static/js/main.de79ef4d.js"
+  ]
+}
