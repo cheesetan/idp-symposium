@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import { TabSelector, AgendaView, ExhibitionsView } from './agenda-app.tsx';
 
-function App() {
+const App = () => {
+  const [activeTab, setActiveTab] = useState('Agenda');
+
+  const gradientStyle = {
+    background: activeTab === 'Agenda'
+      ? 'linear-gradient(180deg, rgba(239,68,68,0.2) 0%, rgb(243 244 246) 66%)'
+      : 'linear-gradient(180deg, rgba(59,130,246,0.2) 0%, rgb(243 244 246) 66%)'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen" style={gradientStyle}>
+      <div className="max-w-md mx-auto p-4">
+        <header className="mb-6">
+          <h1 className="text-2xl font-bold text-gray-900">{activeTab}</h1>
+        </header>
+
+        <TabSelector activeTab={activeTab} setActiveTab={setActiveTab} />
+        {activeTab === 'Agenda' ? <AgendaView /> : <ExhibitionsView />}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
