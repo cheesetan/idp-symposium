@@ -8,7 +8,8 @@ import {
   Book,
   Users,
   Building2,
-  Search
+  Search,
+  ChevronLeft
 } from 'lucide-react';
 
 export const TabSelector = ({ activeTab, setActiveTab }) => {
@@ -125,8 +126,80 @@ export const AgendaView = () => {
   );
 };
 
+const OverlaySheet = ({ exhibition, onClose }) => {
+  if (!exhibition) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+      <div className="fixed inset-x-0 bottom-0 bg-white rounded-t-xl max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-white border-b border-gray-200 p-4">
+          <button 
+            onClick={onClose}
+            className="flex items-center text-gray-600 hover:text-gray-900"
+          >
+            <ChevronLeft className="w-5 h-5 mr-1" />
+            Back
+          </button>
+        </div>
+
+        <div className="p-4 space-y-6">
+          {/* Exhibition header info */}
+          <div className="flex items-start">
+            <div className="p-2 bg-blue-50 rounded-lg">
+              <Building2 className="w-6 h-6 text-blue-500" />
+            </div>
+            <div className="ml-4 flex-1">
+              <h2 className="font-semibold text-gray-900">
+                {exhibition.projectId}: {exhibition.title}
+              </h2>
+              
+              <div className="mt-2 space-y-1">
+                <div className="flex items-center text-gray-600">
+                  <Users className="w-4 h-4 mr-2" />
+                  <span className="text-sm">
+                    {exhibition.members.join(", ")}
+                  </span>
+                </div>
+                
+                <div className="flex items-center text-gray-600">
+                  <Building2 className="w-4 h-4 mr-2" />
+                  <span className="text-sm">{exhibition.organization}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Synopsis section */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Synopsis</h3>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+            <p className="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas pretium aenean pharetra. Orci eu lobortis elementum nibh tellus molestie. Vulputate dignissim suspendisse in est. Vel pharetra vel turpis nunc. Malesuada nunc vel risus commodo. Nisi vitae suscipit tellus mauris. Posuere morbi leo urna molestie at elementum eu. Urna duis convallis convallis tellus. Urna molestie at elementum eu. Nunc sed blandit libero volutpat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const ExhibitionsView = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedExhibition, setSelectedExhibition] = useState(null);
   
   const exhibitions = [
     {
@@ -170,7 +243,8 @@ export const ExhibitionsView = () => {
           filteredExhibitions.map((exhibition, index) => (
             <div 
               key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100"
+              className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100 active:bg-gray-50 cursor-pointer"
+              onClick={() => setSelectedExhibition(exhibition)}
             >
               <div className="flex items-start">
                 <div className="p-2 bg-blue-50 rounded-lg">
@@ -200,6 +274,11 @@ export const ExhibitionsView = () => {
           ))
         )}
       </div>
+
+      <OverlaySheet 
+        exhibition={selectedExhibition} 
+        onClose={() => setSelectedExhibition(null)} 
+      />
     </div>
   );
 };
