@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import { TabSelector, AgendaView, ExhibitionsView } from './agenda-app.tsx';
+import TabSelector from './ui/TabSelector.tsx';
+import AgendaView from './ui/AgendaView.tsx';
+import ExhibitionsView from './ui/ExhibitionsView.tsx';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Agenda');
