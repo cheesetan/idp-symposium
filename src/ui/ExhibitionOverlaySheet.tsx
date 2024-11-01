@@ -1,9 +1,6 @@
 import React from "react";
 import { 
   ChevronLeft, // back button
-
-  Users,      // members of each exhibition
-  Building2,  // organization of each exhibition
 } from 'lucide-react';
 import ExhibitionItem from './ExhibitionItem.tsx';
 

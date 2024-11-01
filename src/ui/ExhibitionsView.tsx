@@ -4,30 +4,30 @@ import SearchBar from './SearchBar.tsx';
 import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
 
+const exhibitions = [
+  {
+    projectId: "ABCD1",
+    title: "Interactive Data Visualization for Climate Change",
+    members: ["Sarah Johnson", "Michael Chen", "Emma Rodriguez"],
+    organization: "Climate Research Institute",
+  },
+  {
+    projectId: "EFGH2",
+    title: "Machine Learning in Healthcare Diagnostics",
+    members: ["David Smith", "Lisa Wong"],
+    organization: "Medical Innovations Lab",
+  },
+  {
+    projectId: "JKLM3",
+    title: "Sustainable Urban Transportation Solutions Platform",
+    members: ["James Wilson", "Ana Patel", "Marcus Lee"],
+    organization: "Smart Cities Initiative",
+  }
+];
+
 const ExhibitionsView = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedExhibition, setSelectedExhibition] = useState(null);
-  
-  const exhibitions = [
-    {
-      projectId: "ABCD1",
-      title: "Interactive Data Visualization for Climate Change",
-      members: ["Sarah Johnson", "Michael Chen", "Emma Rodriguez"],
-      organization: "Climate Research Institute",
-    },
-    {
-      projectId: "EFGH2",
-      title: "Machine Learning in Healthcare Diagnostics",
-      members: ["David Smith", "Lisa Wong"],
-      organization: "Medical Innovations Lab",
-    },
-    {
-      projectId: "JKLM3",
-      title: "Sustainable Urban Transportation Solutions Platform",
-      members: ["James Wilson", "Ana Patel", "Marcus Lee"],
-      organization: "Smart Cities Initiative",
-    }
-  ];
 
   const filteredExhibitions = exhibitions.filter(exhibition => {
     const searchTermLower = searchTerm.toLowerCase();
