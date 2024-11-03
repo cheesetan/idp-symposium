@@ -14,6 +14,7 @@ import {
   Trophy,
   Camera
 } from 'lucide-react';
+import { motion, AnimatePresence } from "framer-motion";
 
 const AgendaView = () => {
   const events = [
@@ -133,40 +134,46 @@ const AgendaView = () => {
         <span>Today</span>
       </div>
 
-      {events.map((event, index) => {
-        const Icon = event.icon;
-        const colors = colorMap[event.color];
+      <AnimatePresence>
+        {events.map((event, index) => {
+          const Icon = event.icon;
+          const colors = colorMap[event.color];
 
-        return (
-          <div 
-            key={index}
-            className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100"
-          >
-            <div className="flex items-start">
-              <div className={`p-2 ${colors.bg} rounded-lg`}>
-                <Icon className={`w-6 h-6 ${colors.text}`} />
-              </div>
-              <div className="ml-4 flex-1">
-                <h2 className="font-semibold text-gray-900">{event.name}</h2>
-                
-                <div className="mt-2 space-y-1">
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="text-sm">
-                      {event.startTime} - {event.endTime}
-                    </span>
-                  </div>
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2, delay: index * 0.05 }}
+              className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100"
+            >
+              <div className="flex items-start">
+                <div className={`p-2 ${colors.bg} rounded-lg`}>
+                  <Icon className={`w-6 h-6 ${colors.text}`} />
+                </div>
+                <div className="ml-4 flex-1">
+                  <h2 className="font-semibold text-gray-900">{event.name}</h2>
                   
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span className="text-sm">{event.venue}</span>
+                  <div className="mt-2 space-y-1">
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-4 h-4 mr-2" />
+                      <span className="text-sm">
+                        {event.startTime} - {event.endTime}
+                      </span>
+                    </div>
+                    
+                    <div className="flex items-center text-gray-600">
+                      <MapPin className="w-4 h-4 mr-2" />
+                      <span className="text-sm">{event.venue}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        );
-      })}
+            </motion.div>
+          );
+        })}
+      </AnimatePresence>
     </div>
   );
 };
