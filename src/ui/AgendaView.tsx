@@ -50,7 +50,7 @@ const AgendaView = () => {
       color: "green"
     },
     {
-      name: "Speech by Mr Nich Chan, Principal of School of Science & Technology",
+      name: "Speech by Mr Nick Chan, Principal of School of Science & Technology",
       venue: "Auditorium (Level 3)",
       startTime: "13:50",
       endTime: "13:55",
