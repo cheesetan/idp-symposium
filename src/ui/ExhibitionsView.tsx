@@ -7,7 +7,7 @@ import ExhibitionItem from './ExhibitionItem.tsx';
 const exhibitions = [
   {
     projectId: "ABS-CS 1",
-    title: "Floating Mangrove Forest",
+    title: "Floating Mangrove Islands",
     members: [
       "Talam Ma Francesca Deheune De La Peri",
       "Low Jia Shen",
@@ -19,36 +19,36 @@ const exhibitions = [
       "This project aims to develop concepts for a sustainable floating mangrove island, with a focus on adaptability to various mangrove swamps, allowing it to be readily adoptable by any mangrove swamp around the globe. The floating mangrove island is a series of floating walkways and platforms for both viewing and planting mangroves. It will first be implemented as an extension of West Coast Park's marsh garden for visitors to learn more about mangroves and appreciate the ecosystem, as well as for activities to be held. This project aims to promote the conservation of mangrove ecosystems, as well as public awareness of their importance.",
   },
   {
-    projectId: "AFND 2 (Industrial Proj)",
-    title: "",
+    projectId: "AFND 2",
+    title: "Personalised Gaming Experieince (Gamers Passport)",
     members: [
       "Fan Yi Xi, Savion",
       "Poon Kar Ngai Lucas",
       "Caden Anthony Fay Teng Aik (Peng Shengyi)",
       "Jayden Ng Kwan Zi (Huang Guangze)",
     ],
-    organization: "",
-    synopsis: "",
+    organization: "Affinidi",
+    synopsis: "The Gamer Passport is a digital identity solution for competitive gamers, esports teams, and tournament organisers. It streamlines verification, credentials management, and gaming event discovery, viewing, and registration. This empowers stakeholders with a secure, unified profile tailored to the gaming industry. The Gamer Passport stores details like verified skill certifications, tournament history, and achievements. This helps enhance reputation tracking and accessibility across multiple gaming platforms. By fostering a trusted and seamless gaming ecosystem, the platform simplifies connections within the gaming community.",
   },
   {
     projectId: "AWWA 2",
-    title: "Designing of toy hub for children with special needs",
+    title: "Designing innovative toys or tools to increase engagement in various types of play",
     members: ["Ng Kian Ping", "Edward Kwek", "Jeremy Neo Kai Hwee"],
     organization: "Asian Women's Welfare Association (AWWA), VIVITA Singapore",
     synopsis:
-      "SpecialSpark is a toy brand specially designed to enhance learning yet bring the same level of sensory play and entertainment for children with special needs. The portable toys can be used both in and out of the classroom, allowing the children to participate in engaging games that enhance creativity and cognitive development. The hub helps combine the toys into unique integrated games to further the children’s knowledge and skills on common topics. We aim to improve sensory and motor skills while providing personalized learning experiences tailored to the needs of children with developmental and learning challenges.",
+      "This project focuses on developing SpecialSpark, a toy specially designed to enhance learning while providing sensory play and entertainment for children with special needs. The portable toy modules can be used both in and out of the classroom, allowing the children to participate in engaging games that enhance creativity and cognitive development in differnet spaces. The main hub then combine the toy modules into unique integrated games to further the children’s knowledge and skills on topics that will be useful for their day to day functioning. We aim to improve sensory and motor skills while providing personalised learning experiences tailored to the needs of children with developmental and learning challenges.",
   },
   {
     projectId: "BII 3",
-    title: "",
+    title: "Analysing Ring-enhancing Brain Lesion using Artificial intelligence",
     members: [
       "Jeff Ng",
       "Felix Forbes Dimjati (Fang Yongsheng)",
       "Lee Dong Ze, Zac",
       "Lim Donghwan",
     ],
-    organization: "",
-    synopsis: "",
+    organization: "A*STAR Bioinformatics Institute (BII)",
+    synopsis: "This project aims to use machine learning to develop a new method of non-invasive diagnosis for Ring Enhancing Brain Lesions between invasive and neoplastic tumors, which should be quicker and more easily available than existing methods in hospitals for patients. Hence, preprocessing steps need to be automated to achieve a quicker workflow for radiologists and a quicker diagnosis. These steps are registration, segmentation, feature extraction and feature selection. After which, the machine learning model can take the scans and classify them into different etiologies.",
   },
   {
     projectId: "DukeNUS 1",
@@ -62,7 +62,7 @@ const exhibitions = [
   {
     projectId: "FTBT 1",
     title:
-      "Designing a set of Loop-mediated isothermal Amplifier (LAMP) primers for testing of Infectious hypodermal and haematopoietic necrosis virus (IHHNV) ",
+      "Designing a set of Loop-mediated isothermal Amplifier (LAMP) primers for testing of Infectious hypodermal and haematopoietic necrosis virus (IHHNV)",
     members: [
       "Chua Jingtin (Cai Jingting) Ranice",
       "P Sadhanah",
@@ -88,7 +88,7 @@ const exhibitions = [
   },
   {
     projectId: "IFN 1",
-    title: "",
+    title: "Tamper Detection and monitoring system: Mobile phone battery",
     members: [
       "Harish Ram Baghavath",
       "Emily Chang Ren Minh",
@@ -96,7 +96,7 @@ const exhibitions = [
       "Nehapatan Rey Alphonsus Macabidang",
     ],
     organization: "Infineon",
-    synopsis: "",
+    synopsis: "This project develops a proof-of-concept tamper detection module (TDM) for phone batteries, which are vulnerable to unauthorised tampering, posing legal and safety risks for consumers and manufacturers. The TDM is designed to be compact, low-powered and uses the PSoC6 microcontroller by Infineon to detect, log, and report tampering attempts, recording events as timestamps accessible via Bluetooth Low Energy (BLE) on a website. AES-CBC encryption and Diffie–Hellman key exchange is used to prevent replay attacks on the bridge between the TDM and the battery. Our setup includes 3D-printed batteries and phone cases are used to simulate and test the usage of TDM.",
   },
   {
     projectId: "KKH 6",
@@ -114,7 +114,7 @@ const exhibitions = [
   },
   {
     projectId: "KKH 7",
-    title: "How long must I wait?",
+    title: "Automating Pill Counting with Computer Vision",
     members: [
       "Dimitros Lim Yi Sheng",
       "Sean Ulric Buguina Chua",
@@ -133,14 +133,15 @@ const exhibitions = [
       "Klifton Cheng",
       "Natalie Chen Hui Regina Ruzsicska",
       "Lim Yongjie",
+      "Seow Jie Rui Gerald"
     ],
     organization: "Magorium Pte Ltd",
     synopsis:
-      "The capstone project aims to optimise a plastic recycling machine while educating young people about the importance of plastic recycling. Students collaborated with Magorium mentors to enhance the machine’s safety, efficiency, and user-friendliness. Key improvements included safety features to prevent plastic escape and a 3D-printed quick-release mould for better injection efficiency. LCD screens were added to display real-time data from VOC and CO2 sensors. Additionally, a 3D-printed filtration system with HEPA and carbon filters was developed to monitor air quality. Regular meetings with mentors provided valuable feedback, leading to creative student innovations and a deeper understanding of sustainability for youths.",
+      "The capstone project aims to optimise a plastic recycling machine while educating young people about the importance of plastic recycling. Students collaborated with Magorium mentors to enhance the machine’s safety, efficiency, and user-friendliness. Key improvements include safety features to prevent plastic escape and a fabricated quick-release system for better injection efficiency. LCD screens were added to display real-time data from VOC and CO2 sensors to monitor air quality. Additionally, a 3D-printed filtration system with HEPA and carbon filters was developed to filter out any harmful gases. Regular meetings with mentors provided valuable feedback, leading to creative student innovations and a deeper understanding of sustainability for youths.",
   },
   {
     projectId: "NIE 1",
-    title: "Biomedical potential of intertidal marine sponges from Singapore",
+    title: "Biomedical Potential of Intertidal Sea Sponges in Singapore",
     members: [
       "Tham En Jie",
       "Kweh Xiao En Carita",
@@ -148,12 +149,12 @@ const exhibitions = [
       "Fera Qairissa Binte Amin",
       "Isabel Ong Li Qi",
     ],
-    organization: "National Institute of Education",
-    synopsis: "hello",
+    organization: "National Institute of Education (NIE)",
+    synopsis: "Dive into the fascinating world of marine sea sponges of the Phylum Porifera, a novel source for compounds to unlock breakthroughs in medicine. As stationary filter feeders, sea sponges develop chemical defences to thrive in their environment. This research explores the compounds through a series of biochemical assays (lab tests) to test for disruption of bacterial communication to reduce infection risk, improvement of cognitive function to alleviate Alzheimer’s patients' symptoms, and screen for anti-cancer activity. Prior to testing, compounds are prepared through a process of polar solvent extraction and vacuum liquid chromatography, concentrating and separating them into fractions. Join us to uncover how these unique organisms can advance medicine.",
   },
   {
     projectId: "Nitto 1",
-    title: "Sustainable Urban Transportation Solutions Platform",
+    title: "Identify potential commercial applications of carbon dioxide gas captured by Nitto's Indoor Air Purifying (IAP)",
     members: [
       "Xavier Yap Jun Xian",
       "Lim Yi Ren Eben",
@@ -162,7 +163,7 @@ const exhibitions = [
     ],
     organization: "Nitto Denko (Singapore) Pte Ltd",
     synopsis:
-      "This investigation explores possible commercial applications of the CO2 captured and released by the IAP system outside the built environment through the production of calcium carbonate, an accelerator for the hardening of concrete. With an extension into storing the carbon dioxide within the built environment for transportation.",
+      "This investigation explores possible commercial applications of the CO2 captured and released by the Indoor Air Purification (IAP) system outside the built environment through the production of calcium carbonate, an accelerator for the hardening of concrete. Within the built environment, it can be used to carbonate drinks and other applications with low technical requirements. The remaining carbon dioxide can then be stored and transported to more specialised locations with more technical equipment, such as research labs, which allow for the production of more specialised products. Outside the built environment, it can be used in the curing of cement, making the cement blocks less porous and stronger. It can also be used to produce graphene and carbon nano-tubes, along with various commercial applications, such as cooling it down to dry ice, allowing for safer transport of produce over long distances. It can be used in its supercritical form as an organic solvent to decaffeinate coffee.",
   },
   {
     projectId: "NNI 1",
