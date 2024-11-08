@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SearchBar from './SearchBar.tsx';
 import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
+import kkh from "./logos/kkh.png";
 
 const exhibitions = [
   {
@@ -15,6 +16,7 @@ const exhibitions = [
       "Kayden Dua Zhen Xuan",
     ],
     organization: "A Builder's Society, City Sprouts",
+    logo: kkh,
     synopsis:
       "This project aims to develop concepts for a sustainable floating mangrove island, with a focus on adaptability to various mangrove swamps, allowing it to be readily adoptable by any mangrove swamp around the globe. The floating mangrove island is a series of floating walkways and platforms for both viewing and planting mangroves. It will first be implemented as an extension of West Coast Park's marsh garden for visitors to learn more about mangroves and appreciate the ecosystem, as well as for activities to be held. This project aims to promote the conservation of mangrove ecosystems, as well as public awareness of their importance.",
   },
@@ -28,6 +30,7 @@ const exhibitions = [
       "Jayden Ng Kwan Zi (Huang Guangze)",
     ],
     organization: "Affinidi",
+    logo: kkh,
     synopsis: "The Gamer Passport is a digital identity solution for competitive gamers, esports teams, and tournament organisers. It streamlines verification, credentials management, and gaming event discovery, viewing, and registration. This empowers stakeholders with a secure, unified profile tailored to the gaming industry. The Gamer Passport stores details like verified skill certifications, tournament history, and achievements. This helps enhance reputation tracking and accessibility across multiple gaming platforms. By fostering a trusted and seamless gaming ecosystem, the platform simplifies connections within the gaming community.",
   },
   {
@@ -35,6 +38,7 @@ const exhibitions = [
     title: "Designing innovative toys or tools to increase engagement in various types of play",
     members: ["Ng Kian Ping", "Edward Kwek", "Jeremy Neo Kai Hwee"],
     organization: "Asian Women's Welfare Association (AWWA), VIVITA Singapore",
+    logo: kkh,
     synopsis:
       "This project focuses on developing SpecialSpark, a toy specially designed to enhance learning while providing sensory play and entertainment for children with special needs. The portable toy modules can be used both in and out of the classroom, allowing the children to participate in engaging games that enhance creativity and cognitive development in differnet spaces. The main hub then combine the toy modules into unique integrated games to further the children’s knowledge and skills on topics that will be useful for their day to day functioning. We aim to improve sensory and motor skills while providing personalised learning experiences tailored to the needs of children with developmental and learning challenges.",
   },
@@ -48,6 +52,7 @@ const exhibitions = [
       "Lim Donghwan",
     ],
     organization: "A*STAR Bioinformatics Institute (BII)",
+    logo: kkh,
     synopsis: "This project aims to use machine learning to develop a new method of non-invasive diagnosis for Ring Enhancing Brain Lesions between invasive and neoplastic tumors, which should be quicker and more easily available than existing methods in hospitals for patients. Hence, preprocessing steps need to be automated to achieve a quicker workflow for radiologists and a quicker diagnosis. These steps are registration, segmentation, feature extraction and feature selection. After which, the machine learning model can take the scans and classify them into different etiologies.",
   },
   {
@@ -56,6 +61,7 @@ const exhibitions = [
       "Investigation of the effectiveness of E3 ligase and heat shock protein (HSP) against CGG repeat expansion-induced neurodegeneration in Parkinson's disease.",
     members: ["Tan Teck Han Tristen (Chen Dehan)", "Ryan Kuah Rui Ann"],
     organization: "National Neuroscience Institute (NNI)",
+    logo: kkh,
     synopsis:
       "This research examines the therapeutic potential of ubiquitin E3 ligase and heat shock proteins (HSP) in addressing CGG repeat-expansion-induced neurodegeneration in Parkinson’s disease (PD). PD is marked by neurodegeneration in the substantia nigra (SN), where neurons controlling movement reside. The degeneration is linked to PolyGlycine (PolyG) chains produced through CGG repeat expansions, which cause neuronal damage. E3 ligase helps degrade misfolded proteins, while HSPs assist in refolding them. Studying their effects may lead to treatments targeting misfolded proteins like PolyG, reducing the rate of neurodegeneration and improving the quality of life for PD patients.",
   },
@@ -69,6 +75,7 @@ const exhibitions = [
       "Marc Alonso Lim Jia Ying",
     ],
     organization: "Forte Biotech",
+    logo: kkh,
     synopsis:
       "Infectious Hypodermal and Hepatopancreatic Necrosis Virus (IHHNV) is the causal viral agent for Runt Deformity Syndrome in Penaeus vannamei. Although there is no effective treatment for IHHNV at the moment, early detection would allow for preventive measures, preventing the spread of IHHNV. Two sets of LAMP primers targeting the capsid protein gene of IHHNV strain ZJ-2014-24 (KU373072), were synthesised after evaluation of several sets of primers. The primers were then tested for their ability to accurately detect the presence of IHHNV. In conclusion, primer set Capsid protein (ID: 72) was successful, while primer set Capsid protein (ID: 92) was not.",
   },
@@ -83,6 +90,7 @@ const exhibitions = [
       "Ng Jing Zhong",
     ],
     organization: "Heartware Network",
+    logo: kkh,
     synopsis:
       "This project aims to help elderly individuals embrace technology by addressing common challenges that they face. Through visits, we identified these issues and developed an app tailored to support seniors in overcoming them. The app includes a library of easy-to-follow instructional videos and a feature that allows seniors to request help from volunteers for personalized assistance. By solving these problems, we hope to encourage the elderly to use technology regularly, improving their quality of life and helping them stay current with technological advancements. Ultimately, the goal is for seniors to embrace and benefit from technology confidently.",
   },
@@ -96,6 +104,7 @@ const exhibitions = [
       "Nehapatan Rey Alphonsus Macabidang",
     ],
     organization: "Infineon",
+    logo: kkh,
     synopsis: "This project develops a proof-of-concept tamper detection module (TDM) for phone batteries, which are vulnerable to unauthorised tampering, posing legal and safety risks for consumers and manufacturers. The TDM is designed to be compact, low-powered and uses the PSoC6 microcontroller by Infineon to detect, log, and report tampering attempts, recording events as timestamps accessible via Bluetooth Low Energy (BLE) on a website. AES-CBC encryption and Diffie–Hellman key exchange is used to prevent replay attacks on the bridge between the TDM and the battery. Our setup includes 3D-printed batteries and phone cases are used to simulate and test the usage of TDM.",
   },
   {
@@ -109,6 +118,7 @@ const exhibitions = [
     ],
     organization:
       "KK Women's and Children's Hospital (KKH), Singapore Institute of Technology (SIT)",
+    logo: kkh,
     synopsis:
       "With medical resources stored and accessed using an intranet system, and dosages calculated using an Excel sheet, the project aims to help medical personnel gain access to medical information and drug information/dosages with minimal delay. The development of the KKH Intensive Care Units CICU mobile app should present user with good readability and clear user interface with accurate formula, manual calculations for healthcare professionals to perform medical attention with ease.",
   },
@@ -123,6 +133,7 @@ const exhibitions = [
     ],
     organization:
       "KK Women's and Children's Hospital (KKH), Singapore Institute of Technology (SIT)",
+    logo: kkh,
     synopsis:
       "To alleviate pharmacists' workload and optimise their workflows, we designed a pill-counting device using computer vision. The product features an intuitive UI displayed on a capacitive touch display and a camera, situated above a tray where pills are placed to be counted. To count the pills, the team trained a custom YOLOv8 computer vision model to perform accurate counting. The team also implemented a unique damaged pill and foreign matter detection algorithm to ensure only healthy pills are packed. Ultimately, this improved the pill-dispensing process, thereby decreasing wait times and increase patient satisfaction.",
   },
@@ -136,6 +147,7 @@ const exhibitions = [
       "Seow Jie Rui Gerald"
     ],
     organization: "Magorium Pte Ltd",
+    logo: kkh,
     synopsis:
       "The capstone project aims to optimise a plastic recycling machine while educating young people about the importance of plastic recycling. Students collaborated with Magorium mentors to enhance the machine’s safety, efficiency, and user-friendliness. Key improvements include safety features to prevent plastic escape and a fabricated quick-release system for better injection efficiency. LCD screens were added to display real-time data from VOC and CO2 sensors to monitor air quality. Additionally, a 3D-printed filtration system with HEPA and carbon filters was developed to filter out any harmful gases. Regular meetings with mentors provided valuable feedback, leading to creative student innovations and a deeper understanding of sustainability for youths.",
   },
@@ -150,6 +162,7 @@ const exhibitions = [
       "Isabel Ong Li Qi",
     ],
     organization: "National Institute of Education (NIE)",
+    logo: kkh,
     synopsis: "Dive into the fascinating world of marine sea sponges of the Phylum Porifera, a novel source for compounds to unlock breakthroughs in medicine. As stationary filter feeders, sea sponges develop chemical defences to thrive in their environment. This research explores the compounds through a series of biochemical assays (lab tests) to test for disruption of bacterial communication to reduce infection risk, improvement of cognitive function to alleviate Alzheimer’s patients' symptoms, and screen for anti-cancer activity. Prior to testing, compounds are prepared through a process of polar solvent extraction and vacuum liquid chromatography, concentrating and separating them into fractions. Join us to uncover how these unique organisms can advance medicine.",
   },
   {
@@ -162,6 +175,7 @@ const exhibitions = [
       "Poon Zhi Ler",
     ],
     organization: "Nitto Denko (Singapore) Pte Ltd",
+    logo: kkh,
     synopsis:
       "This investigation explores possible commercial applications of the CO2 captured and released by the Indoor Air Purification (IAP) system outside the built environment through the production of calcium carbonate, an accelerator for the hardening of concrete. Within the built environment, it can be used to carbonate drinks and other applications with low technical requirements. The remaining carbon dioxide can then be stored and transported to more specialised locations with more technical equipment, such as research labs, which allow for the production of more specialised products. Outside the built environment, it can be used in the curing of cement, making the cement blocks less porous and stronger. It can also be used to produce graphene and carbon nano-tubes, along with various commercial applications, such as cooling it down to dry ice, allowing for safer transport of produce over long distances. It can be used in its supercritical form as an organic solvent to decaffeinate coffee.",
   },
@@ -171,6 +185,7 @@ const exhibitions = [
       "Exploring the Therapeutic Potential of TRPM4 Blocking Antibody on LPS-Induced Lung Inflammation in Mice",
     members: ["Ho Zheng Feng, Triston A'sen", "Chua Tian Tong, Mickey"],
     organization: "National Neuroscience Institute (NNI)",
+    logo: kkh,
     synopsis:
       "Pneumonitis, an inflammatory lung condition which manifests from illnesses such as COVID-19 and H1N1, can evolve into acute respiratory distress syndrome (ARDS), requiring intensive medical intervention. During such diseases, TRPM4 (an ion channel) becomes upregulated, leading to an influx of sodium/chloride ions and, thus, cell death. Our research delves into the therapeutic potential of a TRPM4-blocking antibody (M4P) in protecting lung cell integrity; by testing LPS-induced lung inflammation mice models and quantifying the effects of M4P. This research can help better understand the application of M4P in respiratory illnesses, potentially saving many lives in severe respiratory cases.",
   },
