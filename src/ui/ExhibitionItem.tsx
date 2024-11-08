@@ -5,7 +5,7 @@ const ExhibitionItem = ({ exhibition }) => {
   return (
     <div className="flex items-start">
       <div className="p-2 bg-blue-50 rounded-lg">
-        <img src={exhibition.logo} className="w-6 h-6 text-blue-500" />
+        <img src={exhibition.logo} className="w-6 h-6 text-blue-500 object-contain" />
       </div>
       <div className="ml-4 flex-1">
         <h2 className="font-semibold text-gray-900">
