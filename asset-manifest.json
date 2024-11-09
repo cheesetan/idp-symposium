@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/idp-symposium/static/css/main.73e8f62b.css",
-    "main.js": "/idp-symposium/static/js/main.516d026b.js",
+    "main.js": "/idp-symposium/static/js/main.8447acb3.js",
     "static/js/453.2a23a389.chunk.js": "/idp-symposium/static/js/453.2a23a389.chunk.js",
     "static/media/hwn.png": "/idp-symposium/static/media/hwn.8af3224441256507b1e1.png",
     "static/media/fortebiotech.png": "/idp-symposium/static/media/fortebiotech.d90be460893f4729467b.png",
@@ -16,11 +16,11 @@
     "static/media/magorium.png": "/idp-symposium/static/media/magorium.f9bcdff7962100b2aaef.png",
     "index.html": "/idp-symposium/index.html",
     "main.73e8f62b.css.map": "/idp-symposium/static/css/main.73e8f62b.css.map",
-    "main.516d026b.js.map": "/idp-symposium/static/js/main.516d026b.js.map",
+    "main.8447acb3.js.map": "/idp-symposium/static/js/main.8447acb3.js.map",
     "453.2a23a389.chunk.js.map": "/idp-symposium/static/js/453.2a23a389.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73e8f62b.css",
-    "static/js/main.516d026b.js"
+    "static/js/main.8447acb3.js"
   ]
 }
