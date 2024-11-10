@@ -19,6 +19,13 @@ const InteractiveFloorPlan = ({onGroupFocus}) => {
         console.error(`Room not found: ${roomName}`);
         return;
       }
+
+      // determine if the room is walled. If it isn't, don't focus on it
+      if (!room.walled) {
+        console.log(`Room is not walled: ${room.name}`);
+        return;
+      }
+
       console.log(`Room found: ${room.name}`);
       setFocusedRoom(room); // set the focused room
     }
@@ -37,7 +44,6 @@ const InteractiveFloorPlan = ({onGroupFocus}) => {
           onGroupFocus(tableName)
         }
       />
-      {focusedRoom?.name}
     </div>
   );
 };

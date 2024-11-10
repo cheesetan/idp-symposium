@@ -31,21 +31,25 @@ const FloorPlan = ({width, height, rooms, onRoomClick, onTableClick, offsetX=0, 
     );
 };
 
-const RoomPlan = ({onTableClick, onRoomClick, roomX, roomY, roomWidth, roomHeight, tables, doors, name}) => {
+const RoomPlan = ({onTableClick, onRoomClick, roomX, roomY, roomWidth, roomHeight, tables, doors, name, walled}) => {
     return (
       <g transform={`translate(${roomX}, ${roomY})`}> {/* Transform the X and Y according to roomX and roomY */}
 
-        {/* Room walls */}
-        <rect
-          x={0}
-          y={0}
-          width={roomWidth}
-          height={roomHeight}
-          fill="white"
-          stroke="black"
-          onClick={onRoomClick}
-          strokeWidth={wallThickness}
-        />
+        {/* Room walls, if the room is walled */}
+        {walled && (
+          <rect
+            x={0}
+            y={0}
+            width={roomWidth}
+            height={roomHeight}
+            fill="white"
+            stroke="black"
+            onClick={onRoomClick}
+            strokeWidth={wallThickness}
+          />
+        )}
+
+        {/* Render the tables */}
         {tables.map((table, index) => (
             <Table key={index} {...table} roomWidth={roomWidth} roomHeight={roomHeight} onClick={() => onTableClick(table.name)} />
         ))}

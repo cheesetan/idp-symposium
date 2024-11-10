@@ -4,16 +4,18 @@ export type Room = {
   roomWidth: number;
   roomHeight: number;
   name: string;
+  walled: boolean;
   doors: { x: number; y: number; vertical: boolean; double: boolean; }[];
   tables: { x: number; y: number; name: string; vertical: boolean; }[];
 };
 
-export const trainingRoom1 = {
+export const trainingRoom1: Room = {
     roomX: 0,
     roomY: 0,
     roomWidth: 400,
     roomHeight: 300,
     name: "Training Room 1",
+    walled: true,
     doors: [
         { // bottom left
             x: 10,
@@ -74,12 +76,13 @@ export const trainingRoom1 = {
     ]
 };
 
-export const trainingRoom3 = {
+export const trainingRoom3: Room = {
     roomX: 250,
     roomY: 350,
     roomWidth: 400,
     roomHeight: 350,
     name: "Training Room 3",
+    walled: true,
     doors: [
         { // top left
             x: 10,
@@ -158,9 +161,33 @@ export const trainingRoom3 = {
     ]
 };
 
-const floorplan = [
+export const studentRestArea: Room = {
+    roomX: 400, 
+    roomY: 0, 
+    roomWidth: 250, 
+    roomHeight: 350,
+    name: "Student Rest Area",
+    walled: false,
+    doors: [],
+    tables: []
+}
+
+export const reception: Room = {
+    roomX: 0, 
+    roomY: 350, 
+    roomWidth: 250,
+    roomHeight: 350,
+    name: "Reception",
+    walled: false,
+    doors: [],
+    tables: []
+}
+
+const floorplan: Room[]= [
     trainingRoom1,
-    trainingRoom3
+    trainingRoom3,
+    studentRestArea,
+    reception
 ]
 
 export default floorplan;
