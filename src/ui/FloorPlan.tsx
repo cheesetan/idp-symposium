@@ -1,4 +1,3 @@
-import { param } from 'framer-motion/client';
 import React from 'react';
 
 const RoomPlan = (roomParams) => {
@@ -56,23 +55,11 @@ const RoomPlan = (roomParams) => {
           stroke="black"
           strokeWidth="2"
         />
-        
-        {/* Tables - Vertical on sides */}
-        {/* Left table */}
-        <Table x={15} y={50} vertical={true} name="MGRM 1" />
-        
-        {/* Right table */}
-        <Table x={85} y={50} vertical={true} name="NITTO 1" />
-        
-        {/* Top tables */}
-        <Table x={35} y={15} vertical={false} name="NIE 1" />
-        
-        <Table x={65} y={15} vertical={false} name="FBTB 1" />
-        
-        {/* Bottom tables */}
-        <Table x={35} y={85} vertical={false} name="DukeNUS 1" />
-        
-        <Table x={65} y={85} vertical={false} name="NNI1" />
+
+        {/* Iterate over tables array */}
+        {roomParams.tables.map((table, index) => (
+            <Table key={index} {...table} />
+        ))}
         
         {/* Room label */}
         <text

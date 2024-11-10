@@ -5,6 +5,7 @@ import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
 import RoomPlan from './FloorPlan.tsx';
 import exhibitions from '../data/exhibitions.tsx';
+import tables from '../data/floorplan.tsx';
 
 const useScrollLock = () => {
   const lockScroll = () => {
@@ -47,7 +48,7 @@ const ExhibitionsView = () => {
 
   return (
     <div>
-      <RoomPlan roomWidth={400} roomHeight={300} />
+      <RoomPlan roomWidth={400} roomHeight={300} tables={tables}/>
 
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
