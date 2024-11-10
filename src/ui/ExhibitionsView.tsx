@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SearchBar from './SearchBar.tsx';
 import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
+import RoomPlan from './FloorPlan.tsx';
 
 import abscs from "./logos/citysprouts.png";
 import affinidi from "./logos/affinidi.png";
@@ -245,6 +246,8 @@ const ExhibitionsView = () => {
 
   return (
     <div>
+      <RoomPlan roomWidth={400} roomHeight={300} />
+
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
       <div className="space-y-4">
