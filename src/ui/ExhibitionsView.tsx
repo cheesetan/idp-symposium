@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SearchBar from './SearchBar.tsx';
 import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
-import RoomPlan from './FloorPlan.tsx';
+import FloorPlan from './FloorPlan.tsx';
 import exhibitions from '../data/exhibitions.tsx';
 import tables from '../data/floorplan.tsx';
 
@@ -48,7 +48,7 @@ const ExhibitionsView = () => {
 
   return (
     <div>
-      <RoomPlan roomWidth={400} roomHeight={300} tables={tables}/>
+      <FloorPlan />
 
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
