@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import SearchBar from './SearchBar.tsx';
 import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
-import FloorPlan from './FloorPlan.tsx';
 import exhibitions from '../data/exhibitions.tsx';
-import floorplan from '../data/floorplan.tsx';
+import InteractiveFloorPlan from './InteractiveFloorPlan.tsx';
 
 const useScrollLock = () => {
   const lockScroll = () => {
@@ -48,17 +47,7 @@ const ExhibitionsView = () => {
 
   return (
     <div className="space-y-4">
-      <FloorPlan 
-        width={650} 
-        height={700} 
-        rooms={floorplan} 
-        onRoomClick={(roomName) => 
-          console.log(`Room clicked: ${roomName}`)
-        }
-        onTableClick={(tableName) => 
-          console.log(`Table clicked: ${tableName}`)
-        }
-      />
+      <InteractiveFloorPlan />
 
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 

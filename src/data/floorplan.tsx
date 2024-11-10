@@ -1,3 +1,13 @@
+export type Room = {
+  roomX: number;
+  roomY: number;
+  roomWidth: number;
+  roomHeight: number;
+  name: string;
+  doors: { x: number; y: number; vertical: boolean; double: boolean; }[];
+  tables: { x: number; y: number; name: string; vertical: boolean; }[];
+};
+
 export const trainingRoom1 = {
     roomX: 0,
     roomY: 0,

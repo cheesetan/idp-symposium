@@ -6,7 +6,7 @@ const tableHeight = 80;
 const wallThickness = 5; // thickness of the wall and door
 const doorWidth = 40+wallThickness; // width of the door, plus some allowance for the wall
 
-const FloorPlan = ({width, height, rooms, onRoomClick, onTableClick}) => {
+const FloorPlan = ({width, height, rooms, onRoomClick, onTableClick, offsetX=0, offsetY=0}) => {
     return (
         <div className="bg-white">
             <div className="w-full max-w-xl mx-auto">
@@ -17,8 +17,10 @@ const FloorPlan = ({width, height, rooms, onRoomClick, onTableClick}) => {
                 {/* Render the rooms */}
                 {rooms.map((room, index) => (
                     <RoomPlan 
-                        key={index} 
-                        {...room} 
+                        key={index}
+                        {...room}
+                        roomX={room.roomX + offsetX}
+                        roomY={room.roomY + offsetY}
                         onRoomClick={() => onRoomClick(room.name)} 
                         onTableClick={(tableName) => onTableClick(tableName)} 
                     />
