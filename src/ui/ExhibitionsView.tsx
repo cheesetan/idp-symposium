@@ -47,7 +47,18 @@ const ExhibitionsView = () => {
 
   return (
     <div className="space-y-4">
-      <InteractiveFloorPlan />
+      <InteractiveFloorPlan 
+        onGroupFocus={(tableName) => {
+          console.log(`Table clicked: ${tableName}`)
+          // find the exhibition where the group's name matches the table name
+          const exhibition = exhibitions.find(exhibition => exhibition.projectId === tableName);
+          if (exhibition) {
+            handleOpenExhibition(exhibition);
+          } else {
+            console.error(`Exhibition not found for table: ${tableName}`);
+          }
+        }}
+      />
 
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 

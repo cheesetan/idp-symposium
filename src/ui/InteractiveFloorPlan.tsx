@@ -33,8 +33,8 @@ const InteractiveFloorPlan = ({onGroupFocus}) => {
         offsetX={(focusedRoom?.roomX || 0)*-1}
         offsetY={(focusedRoom?.roomY || 0)*-1}
         onRoomClick={handleRoomClick}
-        onTableClick={(tableName) => 
-          console.log(`Table clicked: ${tableName}`)
+        onTableClick={(tableName) =>
+          onGroupFocus(tableName)
         }
       />
       {focusedRoom?.name}

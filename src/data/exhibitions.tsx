@@ -50,7 +50,7 @@ const exhibitions = [
       "This project focuses on developing SpecialSpark, a toy specially designed to enhance learning while providing sensory play and entertainment for children with special needs. The portable toy modules can be used both in and out of the classroom, allowing the children to participate in engaging games that enhance creativity and cognitive development in differnet spaces. The main hub then combine the toy modules into unique integrated games to further the children’s knowledge and skills on topics that will be useful for their day to day functioning. We aim to improve sensory and motor skills while providing personalised learning experiences tailored to the needs of children with developmental and learning challenges.",
   },
   {
-    projectId: "BII 3",
+    projectId: "BII 2",
     title: "Analysing Ring-enhancing Brain Lesion using Artificial intelligence",
     members: [
       "Jeff Ng",

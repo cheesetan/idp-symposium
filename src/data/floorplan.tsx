@@ -44,7 +44,7 @@ export const trainingRoom1 = {
         { // right
             x: 85,
             y: 50,
-            name: "NITTO 1",
+            name: "Nitto 1",
             vertical: true,
         },
         { // top left
@@ -56,7 +56,7 @@ export const trainingRoom1 = {
         { // top right
             x: 65,
             y: 15,
-            name: "FBTB 1",
+            name: "FTBT 1",
             vertical: false,
         },
         { // bottom left
