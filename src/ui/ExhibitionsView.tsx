@@ -48,7 +48,17 @@ const ExhibitionsView = () => {
 
   return (
     <div className="space-y-4">
-      <FloorPlan width={650} height={700} rooms={floorplan} />
+      <FloorPlan 
+        width={650} 
+        height={700} 
+        rooms={floorplan} 
+        onRoomClick={(roomName) => 
+          console.log(`Room clicked: ${roomName}`)
+        }
+        onTableClick={(tableName) => 
+          console.log(`Table clicked: ${tableName}`)
+        }
+      />
 
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 

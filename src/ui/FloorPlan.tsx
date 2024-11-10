@@ -6,7 +6,7 @@ const tableHeight = 80;
 const wallThickness = 5; // thickness of the wall and door
 const doorWidth = 40+wallThickness; // width of the door, plus some allowance for the wall
 
-const FloorPlan = ({width, height, rooms}) => {
+const FloorPlan = ({width, height, rooms, onRoomClick, onTableClick}) => {
     return (
         <div className="bg-white">
             <div className="w-full max-w-xl mx-auto">
@@ -16,7 +16,12 @@ const FloorPlan = ({width, height, rooms}) => {
             >
                 {/* Render the rooms */}
                 {rooms.map((room, index) => (
-                    <RoomPlan key={index} {...room} />
+                    <RoomPlan 
+                        key={index} 
+                        {...room} 
+                        onRoomClick={() => onRoomClick(room.name)} 
+                        onTableClick={(tableName) => onTableClick(tableName)} 
+                    />
                 ))}
             </svg>
             </div>
@@ -24,9 +29,8 @@ const FloorPlan = ({width, height, rooms}) => {
     );
 };
 
-const RoomPlan = ({roomX, roomY, roomWidth, roomHeight, tables, doors, name}) => {
+const RoomPlan = ({onTableClick, onRoomClick, roomX, roomY, roomWidth, roomHeight, tables, doors, name}) => {
     return (
-        
       <g transform={`translate(${roomX}, ${roomY})`}> {/* Transform the X and Y according to roomX and roomY */}
 
         {/* Room walls */}
@@ -37,10 +41,11 @@ const RoomPlan = ({roomX, roomY, roomWidth, roomHeight, tables, doors, name}) =>
           height={roomHeight}
           fill="white"
           stroke="black"
+          onClick={onRoomClick}
           strokeWidth={wallThickness}
         />
         {tables.map((table, index) => (
-            <Table key={index} {...table} roomWidth={roomWidth} roomHeight={roomHeight} />
+            <Table key={index} {...table} roomWidth={roomWidth} roomHeight={roomHeight} onClick={() => onTableClick(table.name)} />
         ))}
 
         {/* doors */}
@@ -62,7 +67,7 @@ const RoomPlan = ({roomX, roomY, roomWidth, roomHeight, tables, doors, name}) =>
     );
 };
 
-const Table = ({vertical, x, y, roomWidth, roomHeight, name}) => {
+const Table = ({onClick, vertical, x, y, roomWidth, roomHeight, name}) => {
     const width = vertical ? tableWidth : tableHeight;
     const height = vertical ? tableHeight : tableWidth;
 
@@ -70,7 +75,7 @@ const Table = ({vertical, x, y, roomWidth, roomHeight, name}) => {
     const adjustedY = (y/100 * roomHeight) - height/2; // center the table
 
     return (
-        <g>
+        <g onClick={onClick}>
         <rect
             x={adjustedX}
             y={adjustedY}
