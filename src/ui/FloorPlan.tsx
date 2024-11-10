@@ -6,30 +6,25 @@ const tableHeight = 80;
 const wallThickness = 5; // thickness of the wall and door
 const doorWidth = 40+wallThickness; // width of the door, plus some allowance for the wall
 
-const FloorPlan = (floorParams) => {
+const FloorPlan = ({width, height, rooms}) => {
     return (
         <div className="bg-white">
             <div className="w-full max-w-xl mx-auto">
             <svg 
-                viewBox={`0 0 ${floorParams.width} ${floorParams.height}`}
+                viewBox={`0 0 ${width} ${height}`}
                 className="w-full h-auto p-3"
             >
                 {/* Render the rooms */}
-                {floorParams.rooms.map((room, index) => (
+                {rooms.map((room, index) => (
                     <RoomPlan key={index} {...room} />
                 ))}
             </svg>
             </div>
         </div>
     );
-}
+};
 
-const RoomPlan = (roomParams) => {
-    const roomX = roomParams.roomX;
-    const roomY = roomParams.roomY;
-    const roomWidth = roomParams.roomWidth;
-    const roomHeight = roomParams.roomHeight;
-
+const RoomPlan = ({roomX, roomY, roomWidth, roomHeight, tables, doors, name}) => {
     return (
         
       <g transform={`translate(${roomX}, ${roomY})`}> {/* Transform the X and Y according to roomX and roomY */}
@@ -44,12 +39,12 @@ const RoomPlan = (roomParams) => {
           stroke="black"
           strokeWidth={wallThickness}
         />
-        {roomParams.tables.map((table, index) => (
+        {tables.map((table, index) => (
             <Table key={index} {...table} roomWidth={roomWidth} roomHeight={roomHeight} />
         ))}
 
         {/* doors */}
-        {roomParams.doors.map((door, index) => (
+        {doors.map((door, index) => (
             <Door key={index} {...door} roomWidth={roomWidth} roomHeight={roomHeight} />
         ))}
         
@@ -61,24 +56,24 @@ const RoomPlan = (roomParams) => {
           textAnchor="middle"
           dominantBaseline="middle"
         >
-          {roomParams.name}
+          {name}
         </text>
       </g>
     );
 };
 
-const Table = (tableParams) => {
-    const width = tableParams.vertical ? tableWidth : tableHeight;
-    const height = tableParams.vertical ? tableHeight : tableWidth;
+const Table = ({vertical, x, y, roomWidth, roomHeight, name}) => {
+    const width = vertical ? tableWidth : tableHeight;
+    const height = vertical ? tableHeight : tableWidth;
 
-    const x = (tableParams.x/100 * tableParams.roomWidth) - width/2;
-    const y = (tableParams.y/100 * tableParams.roomHeight) - height/2; // center the table
+    const adjustedX = (x/100 * roomWidth) - width/2;
+    const adjustedY = (y/100 * roomHeight) - height/2; // center the table
 
     return (
         <g>
         <rect
-            x={x}
-            y={y}
+            x={adjustedX}
+            y={adjustedY}
             width={width}
             height={height}
             fill="#d1d5db"
@@ -86,14 +81,14 @@ const Table = (tableParams) => {
             className="hover:fill-blue-300 transition-colors cursor-pointer"
         />
         <text
-            x={x + width / 2}
-            y={y + height / 2}
+            x={adjustedX + width / 2}
+            y={adjustedY + height / 2}
             className="text-sm"
             textAnchor="middle"
             dominantBaseline="middle"
-            transform={tableParams.vertical ? `rotate(90, ${x + width / 2}, ${y + height / 2})` : undefined}
+            transform={vertical ? `rotate(90, ${adjustedX + width / 2}, ${adjustedY + height / 2})` : undefined}
         >
-            {tableParams.name}
+            {name}
         </text>
         </g>
     );
