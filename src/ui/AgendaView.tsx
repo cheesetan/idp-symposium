@@ -1,10 +1,8 @@
-import React from 'react';
-import { 
+import React from "react";
+import {
   Calendar, // today icon
-
-  Clock,    // time for each event
-  MapPin,   // location for each event
-
+  Clock, // time for each event
+  MapPin, // location for each event
   ClipboardList, // icons for each event
   Coffee,
   Sofa,
@@ -12,8 +10,8 @@ import {
   Speech,
   View,
   Trophy,
-  Camera
-} from 'lucide-react';
+  Camera,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const AgendaView = () => {
@@ -24,7 +22,7 @@ const AgendaView = () => {
       startTime: "10:30",
       endTime: "12:00",
       icon: ClipboardList,
-      color: "red"
+      color: "red",
     },
     {
       name: "Lunch",
@@ -32,7 +30,7 @@ const AgendaView = () => {
       startTime: "12:00",
       endTime: "13:30",
       icon: Coffee,
-      color: "orange"
+      color: "orange",
     },
     {
       name: "Guests and staff to be seated",
@@ -40,31 +38,23 @@ const AgendaView = () => {
       startTime: "13:30",
       endTime: "13:40",
       icon: Sofa,
-      color: "yellow"
+      color: "yellow",
     },
     {
-      name: "Welcome address by Mr Lim, Principal of Ngee Ann Polytechnic",
+      name: "Opening Address by Mr Nick Chan, Principal of School of Science and Technology, Singapore",
       venue: "Auditorium (Level 3)",
       startTime: "13:40",
-      endTime: "13:45",
-      icon: Speaker,
-      color: "green"
-    },
-    {
-      name: "Speech by Mr Nick Chan, Principal of School of Science & Technology",
-      venue: "Auditorium (Level 3)",
-      startTime: "13:50",
-      endTime: "13:55",
+      endTime: "13:50",
       icon: Speech,
-      color: "blue"
+      color: "green",
     },
     {
-      name: "Viewing of projects & Networking",
+      name: "Viewing of Booths and Networking",
       venue: "Level 5",
-      startTime: "14:00",
+      startTime: "13:50",
       endTime: "15:00",
       icon: View,
-      color: "indigo"
+      color: "blue",
     },
     {
       name: "Award Ceremony",
@@ -72,59 +62,53 @@ const AgendaView = () => {
       startTime: "15:00",
       endTime: "15:30",
       icon: Trophy,
-      color: "purple"
+      color: "indigo",
     },
     {
       name: "Closing by Emcee & Group Photo",
       venue: "Auditorium (Level 3)",
       startTime: "15:30",
-      endTime: "15:35",
       icon: Camera,
-      color: "gray"
-    }
+      color: "purple",
+    },
   ];
 
   const colorMap = {
     red: {
       bg: "bg-red-50",
       text: "text-red-500",
-      border: "border-red-100"
+      border: "border-red-100",
     },
     orange: {
       bg: "bg-orange-50",
       text: "text-orange-500",
-      border: "border-orange-100"
+      border: "border-orange-100",
     },
     yellow: {
       bg: "bg-yellow-50",
       text: "text-yellow-600",
-      border: "border-yellow-100"
+      border: "border-yellow-100",
     },
     green: {
       bg: "bg-green-50",
       text: "text-green-500",
-      border: "border-green-100"
+      border: "border-green-100",
     },
     blue: {
       bg: "bg-blue-50",
       text: "text-blue-500",
-      border: "border-blue-100"
+      border: "border-blue-100",
     },
     indigo: {
       bg: "bg-indigo-50",
       text: "text-indigo-500",
-      border: "border-indigo-100"
+      border: "border-indigo-100",
     },
     purple: {
       bg: "bg-purple-50",
       text: "text-purple-500",
-      border: "border-purple-100"
+      border: "border-purple-100",
     },
-    gray: {
-      bg: "bg-gray-50",
-      text: "text-gray-500",
-      border: "border-gray-100"
-    }
   };
 
   return (
@@ -154,15 +138,19 @@ const AgendaView = () => {
                 </div>
                 <div className="ml-4 flex-1">
                   <h2 className="font-semibold text-gray-900">{event.name}</h2>
-                  
+
                   <div className="mt-2 space-y-1">
                     <div className="flex items-center text-gray-600">
                       <Clock className="w-4 h-4 mr-2" />
-                      <span className="text-sm">
-                        {event.startTime} - {event.endTime}
-                      </span>
+                      {event.endTime === undefined ? (
+                        <span className="text-sm">{event.startTime}</span>
+                      ) : (
+                        <span className="text-sm">
+                          {event.startTime} - {event.endTime}
+                        </span>
+                      )}
                     </div>
-                    
+
                     <div className="flex items-center text-gray-600">
                       <MapPin className="w-4 h-4 mr-2" />
                       <span className="text-sm">{event.venue}</span>
