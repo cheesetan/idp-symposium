@@ -1,20 +1,23 @@
 export const trainingRoom1 = {
+    roomX: 0,
+    roomY: 0,
     roomWidth: 400,
     roomHeight: 300,
+    name: "Training Room 1",
     doors: [
-        {
+        { // bottom left
             x: 10,
             y: 100,
             vertical: false,
             double: true
         },
-        {
+        { // top left
             x: 5,
             y: 0,
             vertical: false,
             double: false
         },
-        {
+        { // top right
             x: 90,
             y: 0,
             vertical: false,
@@ -22,37 +25,37 @@ export const trainingRoom1 = {
         }
     ],
     tables: [
-        {
+        { // left
             x: 15,
             y: 50,
             name: "MGRM 1",
             vertical: true,
         },
-        {
+        { // right
             x: 85,
             y: 50,
             name: "NITTO 1",
             vertical: true,
         },
-        {
+        { // top left
             x: 35,
             y: 15,
             name: "NIE 1",
             vertical: false,
         },
-        {
+        { // top right
             x: 65,
             y: 15,
             name: "FBTB 1",
             vertical: false,
         },
-        {
+        { // bottom left
             x: 35,
             y: 85,
             name: "DukeNUS 1",
             vertical: false,
         },
-        {
+        { // bottom right
             x: 65,
             y: 85,
             name: "NNI 1",
@@ -60,3 +63,94 @@ export const trainingRoom1 = {
         }
     ]
 };
+
+export const trainingRoom3 = {
+    roomX: 250,
+    roomY: 350,
+    roomWidth: 400,
+    roomHeight: 350,
+    name: "Training Room 3",
+    doors: [
+        { // top left
+            x: 10,
+            y: 0,
+            vertical: false,
+            double: true
+        },
+        { // bottom left
+            x: 5,
+            y: 100,
+            vertical: false,
+            double: false
+        },
+        { // bottom right
+            x: 90,
+            y: 100,
+            vertical: false,
+            double: true
+        },
+        { // top right
+            x: 100,
+            y: 5,
+            vertical: true,
+            double: false
+        }
+    ],
+    tables: [
+        { // left top
+            x: 15,
+            y: 35,
+            name: "ABS-CS 1",
+            vertical: true,
+        },
+        { // left bottom
+            x: 15,
+            y: 65,
+            name: "AFND 2",
+            vertical: true,
+        },
+        { // right top
+            x: 85,
+            y: 35,
+            name: "AWWA 2",
+            vertical: true,
+        },
+        { // right bottom
+            x: 85,
+            y: 65,
+            name: "IFN 1",
+            vertical: true,
+        },
+        { // top left
+            x: 35,
+            y: 15,
+            name: "BII 2",
+            vertical: false,
+        },
+        { // top right
+            x: 65,
+            y: 15,
+            name: "KKH 7",
+            vertical: false,
+        },
+        { // bottom left
+            x: 35,
+            y: 85,
+            name: "HWN 1",
+            vertical: false,
+        },
+        { // bottom right
+            x: 65,
+            y: 85,
+            name: "KKH 6",
+            vertical: false,
+        }
+    ]
+};
+
+const floorplan = [
+    trainingRoom1,
+    trainingRoom3
+]
+
+export default floorplan;

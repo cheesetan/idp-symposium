@@ -1,25 +1,23 @@
 import React from 'react';
-import { trainingRoom1 } from '../data/floorplan.tsx';
 
 const tableWidth = 40;
 const tableHeight = 80;
 
-const doorWidth = 40;
-const wallThickness = 2; // thickness of the wall and door
+const wallThickness = 5; // thickness of the wall and door
+const doorWidth = 40+wallThickness; // width of the door, plus some allowance for the wall
 
-const FloorPlan = () => {
-
-    const roomWidth = 400;
-    const roomHeight = 300;
-
+const FloorPlan = (floorParams) => {
     return (
         <div className="bg-white">
-            <div className="w-full max-w-xl mx-auto p-4">
+            <div className="w-full max-w-xl mx-auto">
             <svg 
-                viewBox={`0 0 ${roomWidth*3} ${roomHeight*3}`}
-                className="w-full h-auto border-2 border-gray-800"
+                viewBox={`0 0 ${floorParams.width} ${floorParams.height}`}
+                className="w-full h-auto p-3"
             >
-            <RoomPlan roomX={0} roomY={0} {...trainingRoom1}/>
+                {/* Render the rooms */}
+                {floorParams.rooms.map((room, index) => (
+                    <RoomPlan key={index} {...room} />
+                ))}
             </svg>
             </div>
         </div>
@@ -57,13 +55,13 @@ const RoomPlan = (roomParams) => {
         
         {/* Room label */}
         <text
-          x="200"
-          y="150"
+          x={roomWidth/2}
+          y={roomHeight/2}
           className="text-lg font-semibold"
           textAnchor="middle"
           dominantBaseline="middle"
         >
-          Training Room 1
+          {roomParams.name}
         </text>
       </g>
     );
