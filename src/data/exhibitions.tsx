@@ -68,7 +68,7 @@ const exhibitions = [
       "Investigation of the effectiveness of E3 ligase and heat shock protein (HSP) against CGG repeat expansion-induced neurodegeneration in Parkinson's disease",
     members: ["Tan Teck Han Tristen (Chen Dehan)", "Ryan Kuah Rui Ann"],
     organization: "National Neuroscience Institute (NNI)",
-    logo: dukenus,
+    logo: nni,
     synopsis:
       "This research examines the therapeutic potential of ubiquitin E3 ligase and heat shock proteins (HSP) in addressing CGG repeat-expansion-induced neurodegeneration in Parkinson’s disease (PD). PD is marked by neurodegeneration in the substantia nigra (SN), where neurons controlling movement reside. The degeneration is linked to PolyGlycine (PolyG) chains produced through CGG repeat expansions, which cause neuronal damage. E3 ligase helps degrade misfolded proteins, while HSPs assist in refolding them. Studying their effects may lead to treatments targeting misfolded proteins like PolyG, reducing the rate of neurodegeneration and improving the quality of life for PD patients.",
   },
