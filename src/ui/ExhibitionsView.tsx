@@ -64,7 +64,8 @@ const ExhibitionsView = () => {
     return (
       exhibition.projectId.toLowerCase().includes(searchTermLower) ||
       exhibition.title.toLowerCase().includes(searchTermLower) ||
-      exhibition.organization.toLowerCase().includes(searchTermLower)
+      exhibition.organization.toLowerCase().includes(searchTermLower) || 
+      exhibition.members.some(item => item.toLowerCase().includes(searchTermLower))
     );
   });
 
