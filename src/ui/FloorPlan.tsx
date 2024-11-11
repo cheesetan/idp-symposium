@@ -36,18 +36,17 @@ const RoomPlan = ({onTableClick, onRoomClick, roomX, roomY, roomWidth, roomHeigh
       <g transform={`translate(${roomX}, ${roomY})`}> {/* Transform the X and Y according to roomX and roomY */}
 
         {/* Room walls, if the room is walled */}
-        {walled && (
-          <rect
-            x={0}
-            y={0}
-            width={roomWidth}
-            height={roomHeight}
-            fill="white"
-            stroke="black"
-            onClick={onRoomClick}
-            strokeWidth={wallThickness}
-          />
-        )}
+        <rect
+          x={0}
+          y={0}
+          width={roomWidth}
+          height={roomHeight}
+          fill="white"
+          stroke="black"
+          onClick={onRoomClick}
+          strokeWidth={wallThickness}
+          stroke-dasharray={walled ? "" : "10,10"}
+        />
 
         {/* Render the tables */}
         {tables.map((table, index) => (
