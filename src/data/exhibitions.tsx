@@ -51,7 +51,7 @@ const exhibitions = [
   },
   {
     projectId: "BII 2",
-    title: "Analysing Ring-enhancing Brain Lesion using Artificial intelligence",
+    title: "Analysing Ring-enhancing Brain Lesion using Artificial Intelligence",
     members: [
       "Jeff Ng",
       "Felix Forbes Dimjati (Fang Yongsheng)",
@@ -65,7 +65,7 @@ const exhibitions = [
   {
     projectId: "DukeNUS 1",
     title:
-      "Investigation of the effectiveness of E3 ligase and heat shock protein (HSP) against CGG repeat expansion-induced neurodegeneration in Parkinson's disease.",
+      "Investigation of the effectiveness of E3 ligase and heat shock protein (HSP) against CGG repeat expansion-induced neurodegeneration in Parkinson's disease",
     members: ["Tan Teck Han Tristen (Chen Dehan)", "Ryan Kuah Rui Ann"],
     organization: "National Neuroscience Institute (NNI)",
     logo: dukenus,
@@ -89,7 +89,7 @@ const exhibitions = [
   {
     projectId: "HWN 1",
     title:
-      "The creation of digital tools to help the elderly embrace technology.",
+      "The creation of digital tools to help the elderly embrace technology",
     members: [
       "Raphael Lam Chew Ray",
       "Vernon Loh Jin Feng (Luo Jingfeng)",
@@ -103,7 +103,7 @@ const exhibitions = [
   },
   {
     projectId: "IFN 1",
-    title: "Tamper Detection and monitoring system: Mobile phone battery",
+    title: "Tamper Detection and Monitoring System: Mobile phone battery",
     members: [
       "Harish Ram Baghavath",
       "Emily Chang Ren Minh",
