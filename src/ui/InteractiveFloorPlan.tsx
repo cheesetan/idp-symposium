@@ -32,7 +32,7 @@ const InteractiveFloorPlan = ({floorplan, onGroupFocus}) => {
   };
 
   return (
-    <div>
+    <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-sm border border-gray-100 active:bg-gray-50 cursor-pointer">
       <FloorPlan
         width={focusedRoom == null ? 650 : focusedRoom.roomWidth}
         height={focusedRoom == null ? 700 : focusedRoom.roomHeight}
