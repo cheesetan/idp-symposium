@@ -106,24 +106,92 @@ const Table = ({onClick, vertical, x, y, roomWidth, roomHeight, name}) => {
 }
 
 const Door = (doorParams) => {
-    const doors = doorParams.double ? 2 : 1;
+  const {
+    x,
+    y,
+    roomWidth,
+    roomHeight,
+    double = false,
+    vertical = false,
+    wallThickness = 10,
+    doorWidth = 30,
+    isLeftHinge = true,
+    color = "#000",
+  } = doorParams;
 
-    const width = doorParams.vertical ? wallThickness*2 : doorWidth*doors;
-    const height = doorParams.vertical ? doorWidth*doors : wallThickness*2;
+  // Calculate dimensions and position
+  const doors = double ? 2 : 1;
+  const width = vertical ? wallThickness * 2 : doorWidth * doors;
+  const height = vertical ? doorWidth * doors : wallThickness * 2;
+  const rectposX = (x / 100) * roomWidth - width / 2;
+  const rectposY = (y / 100) * roomHeight - height / 2;
+  const posX = ((x / 100) * roomWidth - width / 2) - 0.5;
+  const posY = ((y / 100) * roomHeight - height / 2) - 10;
 
-    const x = (doorParams.x/100 * doorParams.roomWidth) - width/2;
-    const y = (doorParams.y/100 * doorParams.roomHeight) - height/2;
+  // Determine rotation based on vertical/horizontal orientation
+  const rotation = vertical ? 90 : 0;
 
-    return (
-        <rect
-        x={x}
-        y={y}
-        width={width}
-        height={height}
-        fill="white"
-        />
-    );
-}
+  const SingleDoor = ({ x, y, width, isLeftHinge }) => (
+    <g>
+      {/* Door panel */}
+      <line
+        x1={isLeftHinge ? 0 : width}
+        y1="0"
+        x2={isLeftHinge ? 0 : width}
+        y2={-width}
+        stroke={color}
+        strokeWidth="3"
+      />
+
+      {/* Door swing arc */}
+      <path
+        d={`M ${isLeftHinge ? 0 : width} ${-width} 
+            A ${width} ${width} 0 0 ${isLeftHinge ? 1 : 0} 
+            ${isLeftHinge ? width : 0} 0`}
+        fill="none"
+        stroke={color}
+        strokeWidth="1"
+        strokeDasharray="3 3"
+      />
+    </g>
+  );
+
+  return (
+    <g>
+      <rect x={rectposX} y={rectposY} width={width} height={height} fill="white" />
+      <g
+        transform={`translate(${posX},${posY}) rotate(${rotation}, ${
+          width / 2
+        }, ${height / 2})`}
+        className="hover:opacity-80 transition-opacity cursor-pointer"
+      >
+        {double ? (
+          // Double doors
+          <>
+            {/* Left door */}
+            <g transform={`translate(0, ${height})`}>
+              <SingleDoor x={0} y={0} width={doorWidth} isLeftHinge={true} />
+            </g>
+            {/* Right door */}
+            <g transform={`translate(${doorWidth}, ${height})`}>
+              <SingleDoor x={0} y={0} width={doorWidth} isLeftHinge={false} />
+            </g>
+          </>
+        ) : (
+          // Single door
+          <g transform={`translate(0, ${height})`}>
+            <SingleDoor
+              x={0}
+              y={0}
+              width={doorWidth}
+              isLeftHinge={isLeftHinge}
+            />
+          </g>
+        )}
+      </g>
+    </g>
+  );
+};
 
 
 export default FloorPlan;
