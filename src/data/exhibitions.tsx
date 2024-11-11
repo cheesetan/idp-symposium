@@ -116,7 +116,7 @@ const exhibitions = [
   },
   {
     projectId: "KKH 6",
-    title: "Improving Children's Intensive Care Unit (CICU) resident education",
+    title: "Improving Children's Intensive Care Unit (CICU) Resident Information Access",
     members: [
       "Chay Yu Hung Tristan",
       "Ryan Tung Tze-Jin",
