@@ -1,8 +1,8 @@
 import React from 'react';
 import FloorPlan from './FloorPlan.tsx';
-import floorplan, { Room } from '../data/floorplan.tsx';
+import { Room } from '../data/floorplan.tsx';
 
-const InteractiveFloorPlan = ({onGroupFocus}) => {
+const InteractiveFloorPlan = ({floorplan, onGroupFocus}) => {
   // store which room is currently focused, or null if no room is focused
   const [focusedRoom, setFocusedRoom] = React.useState<Room | null>(null);
 

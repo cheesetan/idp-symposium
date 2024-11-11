@@ -5,6 +5,7 @@ import ExhibitionOverlaySheet from './ExhibitionOverlaySheet.tsx';
 import ExhibitionItem from './ExhibitionItem.tsx';
 import exhibitions from '../data/exhibitions.tsx';
 import InteractiveFloorPlan from './InteractiveFloorPlan.tsx';
+import floorplan from '../data/floorplan.tsx';
 
 const useScrollLock = () => {
   const lockScroll = () => {
@@ -47,7 +48,8 @@ const ExhibitionsView = () => {
 
   return (
     <div className="space-y-4">
-      <InteractiveFloorPlan 
+      <InteractiveFloorPlan
+        floorplan={floorplan}
         onGroupFocus={(tableName) => {
           console.log(`Table clicked: ${tableName}`)
           // find the exhibition where the group's name matches the table name
