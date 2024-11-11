@@ -108,7 +108,7 @@ const exhibitions = [
       "Harish Ram Baghavath",
       "Emily Chang Ren Minh",
       "Foo G'ywinn",
-      "Nehapatan Rey Alphonsus Macabidang",
+      "Negapatan Rey Alphonsus Macabidang",
     ],
     organization: "Infineon",
     logo: infineon,
