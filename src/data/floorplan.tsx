@@ -10,9 +10,9 @@ export type Room = {
 };
 
 export const trainingRoom2: Room = {
-    roomX: 220,
+    roomX: 0,
     roomY: 0,
-    roomWidth: 380,
+    roomWidth: 600,
     roomHeight: 300,
     name: "Training Room 2",
     walled: true,
@@ -77,9 +77,9 @@ export const trainingRoom2: Room = {
 };
 
 export const trainingRoom3: Room = {
-    roomX: 150,
+    roomX: 0,
     roomY: 350,
-    roomWidth: 500,
+    roomWidth: 600,
     roomHeight: 350,
     name: "Training Room 3",
     walled: true,
@@ -161,33 +161,9 @@ export const trainingRoom3: Room = {
     ]
 };
 
-export const studentRestArea: Room = {
-    roomX: 0, 
-    roomY: 0, 
-    roomWidth: 220,
-    roomHeight: 300,
-    name: "Student Rest Area",
-    walled: false,
-    doors: [],
-    tables: []
-}
-
-export const reception: Room = {
-    roomX: 0, 
-    roomY: 350, 
-    roomWidth: 150,
-    roomHeight: 350,
-    name: "VIP Reception",
-    walled: false,
-    doors: [],
-    tables: []
-}
-
 const floorplan: Room[]= [
-    studentRestArea,
     trainingRoom2,
-    trainingRoom3,
-    reception
+    trainingRoom3
 ]
 
 export default floorplan;
