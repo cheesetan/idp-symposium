@@ -127,7 +127,7 @@ const exhibitions = [
       "KK Women's and Children's Hospital (KKH), Singapore Institute of Technology (SIT)",
     logo: kkh,
     synopsis:
-      "The KKH CICU project aims to develop a mobile application for doctors and nurses in the Children’s Intensive Care Unit (CICU) at KK Women’s and Children’s Hospital. The app seeks to simplify access to crucial CICU-related educational resources and medical calculators, enabling doctors and nurses to retrieve accurate information during their rounds quickly. Key features include a unified search interface, intuitive navigation across a wide range of documents and calculators, and all of the medical resources consolidated. Incorporating feedback from CICU professionals, the app strives to enhance decision-making support and improve patient care in high-stakes settings.",
+      "The KKH CICU project aims to develop a mobile application for doctors and nurses in the Children’s Intensive Care Unit (CICU) at KK Women’s and Children’s Hospital. The app seeks to simplify access to crucial CICU-related educational resources and medical calculators, enabling doctors and nurses to retrieve accurate information quickly. Key features include a unified search interface, intuitive navigation across a wide range of documents and calculators, and consolidated medical resources. Incorporating feedback from CICU professionals, the app strives to enhance decision-making support and improve patient care in high-stakes settings.",
   },
   {
     projectId: "KKH 7",
