@@ -17,8 +17,9 @@ const App = () => {
     <div className="min-h-screen" style={gradientStyle}>
       <div className="max-w-md mx-auto p-4">
         <header className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">{activeTab}</h1>
-          <h2 className="text-gray-600 text-sm">E-programme done by Chay Yu Hung Tristan and Tay Kai Quan from IDP Class S4-04.</h2>
+        <h1 className="text-2xl font-bold text-gray-900">SST-NP Di'SPARK Capstone Project Showcase Day Programme</h1>
+          <h1 className="text-xl font-bold text-gray-900 pt-5">{activeTab}</h1>
+          <h2 className="text-gray-600 text-sm">E-programme done by Chay Yu Hung Tristan and Tay Kai Quan, IDP Class of 2024.</h2>
         </header>
 
         <TabSelector activeTab={activeTab} setActiveTab={setActiveTab} />
