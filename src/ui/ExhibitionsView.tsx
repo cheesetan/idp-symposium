@@ -79,6 +79,8 @@ const ExhibitionsView = () => {
     >
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
       
+      <div>
+      <h2 className="px-1">Click on the booths in the map below to learn more.</h2>
       <AnimatePresence mode="wait">
         {searchTerm.length === 0 ? (
           <motion.div
@@ -112,6 +114,7 @@ const ExhibitionsView = () => {
           />
         )}
       </AnimatePresence>
+      </div>
 
       <motion.div 
         className="space-y-4"

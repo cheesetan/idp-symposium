@@ -18,7 +18,7 @@ const App = () => {
       <div className="max-w-md mx-auto p-4">
         <header className="mb-6">
           <h1 className="text-2xl font-bold text-gray-900">{activeTab}</h1>
-          <h2 className="text-gray-600">The e-programme website was developed by Chay Yu Hung Tristan and Tay Kai Quan from team KKH 6.</h2>
+          <h2 className="text-gray-600 text-sm">E-programme done by Chay Yu Hung Tristan and Tay Kai Quan from IDP Class S4-04.</h2>
         </header>
 
         <TabSelector activeTab={activeTab} setActiveTab={setActiveTab} />

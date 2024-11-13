@@ -18,7 +18,7 @@ const AgendaView = () => {
   const events = [
     {
       name: "Assessment of Capstone Projects",
-      venue: "Level 5",
+      venue: "Training Rooms 2 & 3 (Level 5)",
       startTime: "10:30",
       endTime: "12:00",
       icon: ClipboardList,
@@ -26,7 +26,7 @@ const AgendaView = () => {
     },
     {
       name: "Lunch",
-      venue: "Level 5",
+      venue: "Level 3 (Parents) / Level 5 (Guests & Mentors)",
       startTime: "12:00",
       endTime: "13:30",
       icon: Coffee,
@@ -50,7 +50,7 @@ const AgendaView = () => {
     },
     {
       name: "Viewing of Booths and Networking",
-      venue: "Level 5",
+      venue: "Training Rooms 2 & 3 (Level 5)",
       startTime: "13:50",
       endTime: "15:00",
       icon: View,
@@ -65,7 +65,7 @@ const AgendaView = () => {
       color: "indigo",
     },
     {
-      name: "Closing by Emcee & Group Photo",
+      name: "Closing & Group Photo",
       venue: "Auditorium (Level 3)",
       startTime: "15:30",
       icon: Camera,
