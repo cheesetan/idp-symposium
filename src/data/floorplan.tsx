@@ -14,7 +14,7 @@ export const trainingRoom2: Room = {
     roomY: 0,
     roomWidth: 600,
     roomHeight: 300,
-    name: "Training Room 2",
+    name: "Training Room 05-05",
     walled: true,
     doors: [
         { // bottom left
@@ -81,7 +81,7 @@ export const trainingRoom3: Room = {
     roomY: 350,
     roomWidth: 600,
     roomHeight: 350,
-    name: "Training Room 3",
+    name: "Training Room 05-06",
     walled: true,
     doors: [
         { // top left
